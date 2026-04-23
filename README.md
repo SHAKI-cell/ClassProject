@@ -8,7 +8,7 @@ The following document provides **step-by-step evidence** of each problem, its r
 
 ---
 
-## 📋 Original Debugging Tasks (Total: 10 Issues)
+## 📋 Original Debugging Tasks
 
 | Task | Issue Description | Severity | Status |
 |------|------------------|----------|--------|
