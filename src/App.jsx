@@ -8,6 +8,7 @@ import DietPlan from './Pages/DietPlan'
 import Login from './Pages/Login'
 import DashBoard from './Pages/DashBord'
 import Register from './Pages/Register'
+import Aipages from './Pages/Aipages'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path='/dashboard' element={<DashBoard />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/ai-diet" element={<Aipages />} />
       </Routes>
     </>
   )

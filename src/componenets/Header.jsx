@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import logo from '../assets/logo.png'
+import aiLogo from '../assets/Ai_logo.png'
 import './Header.css'
 
 const Header = () => {
@@ -64,6 +65,11 @@ const Header = () => {
             {/* Login */}
             <Link to="/login" className="header-cta">
               Login
+            </Link>
+
+            {/* AI DIET LOGO BUTTON */}
+            <Link to="/ai-diet" className="header-ai-btn" title="AI Diet Planner">
+              <img src={aiLogo} alt="AI Diet" className="header-ai-logo-img" />
             </Link>
 
             {/* 👤 PROFILE BUTTON (NEW) */}

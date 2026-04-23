@@ -1,14 +1,18 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Use environment variable if available, otherwise fallback
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY || "AIzaSyDYW4Xxqsdp_KN3tLMGrf06BCZzWWzuoio";
-const genAI = new GoogleGenerativeAI(apiKey);
-
 export const generateDietPlan = async (userInput) => {
-  if (!apiKey) {
-    alert("Please configure your Gemini API Key! Replace 'YOUR_GEMINI_API_KEY' in geminiService.js or use .env file.");
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+  // Debug log (Safe: only shows first/last 4 chars)
+  // console.log("Gemini API Key Loaded:", apiKey ? `${apiKey.slice(0, 4)}...${apiKey.slice(-4)}` : "NOT FOUND");
+
+  if (!apiKey || apiKey === "YOUR_NEW_API_KEY_HERE") {
+    alert("API Key not found! Please check your .env file and RESTART your dev server (Ctrl+C then npm run dev).");
     return [];
   }
+
+  const genAI = new GoogleGenerativeAI(apiKey);
 
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });

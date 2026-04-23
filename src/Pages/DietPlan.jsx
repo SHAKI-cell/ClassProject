@@ -162,10 +162,7 @@ export default function DietPlan() {
     <Layout>
       <div className="min-h-screen bg-gray-100 p-6">
 
-        {/* AI DIET PLANNER */}
-        <div className="max-w-3xl mx-auto mb-8">
-          <AiDiet onAddMeal={handleAddMealFromAI} />
-        </div>
+        
 
         {/* FORM */}
         <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-6 mb-8">
