@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import heroImg from '../assets/hero.png'
 import './Section1.css'
 
 const Section1 = () => {
@@ -8,9 +7,37 @@ const Section1 = () => {
     <>
       {/* ── HERO ── */}
       <section className="hero-section" id="hero">
-        <img src={heroImg} alt="Healthy food background" className="hero-bg" />
+
+        {/* Background: real food image via Unsplash */}
+        <img
+          src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1400&q=80&auto=format&fit=crop"
+          alt="Healthy food background"
+          className="hero-bg"
+        />
+
+        {/* Dark green gradient overlay (left-heavy) */}
         <div className="hero-overlay" />
 
+        {/* Right side decorative food plate */}
+        <div className="hero-right-art">
+          <div className="hero-plate">
+            <span className="hero-plate-emoji">🥗</span>
+            <div className="float-tag tag1">
+              <span className="dot-green" />
+              500+ Diet Plans
+            </div>
+            <div className="float-tag tag2">
+              <span className="dot-orange" />
+              10K+ Foods
+            </div>
+            <div className="float-tag tag3">
+              <span className="dot-green" />
+              50K+ Happy Users
+            </div>
+          </div>
+        </div>
+
+        {/* Main content */}
         <div className="hero-content">
           <div className="hero-badge">
             <span className="hero-badge-dot" />
@@ -29,7 +56,6 @@ const Section1 = () => {
           </p>
 
           <div className="hero-cta-row">
-            {/* ✅ Get Started now navigates to /login */}
             <Link to="/login" className="hero-btn-primary">
               Get Started
               <svg viewBox="0 0 24 24">
@@ -37,7 +63,7 @@ const Section1 = () => {
               </svg>
             </Link>
 
-            <Link to="/about" className="hero-btn-secondary">
+            <Link to="/about" className="hero-btn-glass">
               About Us
               <svg viewBox="0 0 24 24">
                 <line x1="5" y1="12" x2="19" y2="12" />
@@ -216,7 +242,6 @@ const Section1 = () => {
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-top">
-            {/* Brand */}
             <div className="footer-brand">
               <div className="footer-logo">
                 <span className="footer-logo-nutri">Nutri</span>
@@ -230,9 +255,8 @@ const Section1 = () => {
               </div>
             </div>
 
-            {/* Links */}
             <div className="footer-links-group">
-              <h4 className="footer-links-heading">Product</h4>
+              <h4>Product</h4>
               <ul>
                 <li><Link to="/diet-plan">Diet Plans</Link></li>
                 <li><Link to="/food-info">Food Info</Link></li>
@@ -242,7 +266,7 @@ const Section1 = () => {
             </div>
 
             <div className="footer-links-group">
-              <h4 className="footer-links-heading">Company</h4>
+              <h4>Company</h4>
               <ul>
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/blog">Blog</Link></li>
@@ -252,7 +276,7 @@ const Section1 = () => {
             </div>
 
             <div className="footer-links-group">
-              <h4 className="footer-links-heading">Support</h4>
+              <h4>Support</h4>
               <ul>
                 <li><Link to="/faq">FAQ</Link></li>
                 <li><Link to="/privacy">Privacy Policy</Link></li>
@@ -261,9 +285,8 @@ const Section1 = () => {
               </ul>
             </div>
 
-            {/* Newsletter */}
             <div className="footer-newsletter">
-              <h4 className="footer-links-heading">Stay Updated</h4>
+              <h4>Stay Updated</h4>
               <p>Get weekly nutrition tips straight to your inbox.</p>
               <div className="newsletter-row">
                 <input type="email" placeholder="your@email.com" className="newsletter-input" />
